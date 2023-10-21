@@ -38,5 +38,56 @@ img: ":home-heading.jpg"
 ---
 
 
-#### Texts
-testtesttest
+May Azcarraga
+=============
+
+-------------------     ----------------------------
+Greater Seattle Area               email@example.com
+MyTown 1000                          @twitter_handle
+-------------------     ----------------------------
+
+#### Education
+--------------
+2023-Current
+: **Masters, Cybersecurity and Leadership; University of Washington
+
+2014-2018
+: **BA, Concentration in Management Information Systems; University of Washington
+
+Experience
+----------
+
+* First item
+** other jobs**
+
+other descriptions
+
+Technical Experience
+--------------------
+
+Side Project
+: item1
+
+  * contains this
+  * contains 2nd item
+  *
+
+Open Source
+: **something
+
+
+Programing Language
+: itemize, first lang
+
+: **2nd-lang**
+
+: **3rd-lang**
+
+: Basic knowledge
+
+other stuff
+
+Extra Experience
+----------------
+* ?
+*other Random stuff
