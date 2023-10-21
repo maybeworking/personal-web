@@ -41,10 +41,9 @@ img: ":home-heading.jpg"
 May Azcarraga
 =============
 
--------------------     ----------------------------
-Greater Seattle Area               email@example.com
-MyTown 1000                          @twitter_handle
--------------------     ----------------------------
+Greater Seattle Area
+-------------------
+Paragraph words over here
 
 #### Education
 --------------
