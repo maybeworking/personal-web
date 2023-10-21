@@ -36,9 +36,9 @@ meta_description: "I'm the problem it's me"
 #published: false
 ---
 
-{%- comment -%} Please delete below and place your page content here {%- endcomment -%}
+### Headings (centered)
+{:data-align="center"}
 
-{%- include util/auto-content-generator.liquid -%}
-{{ website_info_text_first }}
+#### Paragraph
 
-{{ website_info_text_second }}
+born to be wild
