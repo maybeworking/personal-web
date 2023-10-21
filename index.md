@@ -38,14 +38,21 @@ img: ":home-heading.jpg"
 ---
 
 
-May Azcarraga
+Hello, I am May, a security enthusiest  
 =============
 
-Greater Seattle Area
--------------------
-Paragraph words over here
+## Skills
+- list list
+### Programing Language
+| test1(left align) | test2 (left align) | test3 (left align) |
+| test1 | test2 | test3 |
+| test1 | test2 | test3 |
+| test1 | test2 | test3 |
+{:data-align="center"}
+: Basic knowledge
 
-#### Education
+other stuff
+Education
 --------------
 2023-Current
 : **Masters, Cybersecurity and Leadership; University of Washington
@@ -53,40 +60,35 @@ Paragraph words over here
 2014-2018
 : **BA, Concentration in Management Information Systems; University of Washington
 
+Certifications
+--------------
+- xxx-xxx
+
 Experience
 ----------
+### Job Title - Company Name
+- *location* - employment period
+- responsibilities, accomplishments, achievements
+-
 
-* First item
-** other jobs**
 
-other descriptions
-
-Technical Experience
+Projects
 --------------------
 
-Side Project
+### Side Project
 : item1
 
   * contains this
   * contains 2nd item
   *
 
-Open Source
+### Open Source
 : **something
 
-
-Programing Language
-: itemize, first lang
-
-: **2nd-lang**
-
-: **3rd-lang**
-
-: Basic knowledge
-
-other stuff
 
 Extra Experience
 ----------------
 * ?
 *other Random stuff
+
+

@@ -15,6 +15,10 @@ layout: default
 #  {%- endif -%}
 #{%- endif -%}
 
+#  <div class="home-heading" {{ home_img_background_style }}>
+#    {{ home_img_tag }}
+#</div>
+
 #{%- if lng_pages.size > 0 and site.data.conf.others.home.new_posts %}
 #<div class="multipurpose-container new-posts-container">
 #  <h1>{{ site.data.lang[lng].home.new_posts_title }}</h1>
@@ -40,8 +44,6 @@ layout: default
 
 {%- include multi_lng/get-pages-by-lng.liquid pages = site.posts -%}
 <div class="multipurpose-container home-heading-container">
-  <div class="home-heading" {{ home_img_background_style }}>
-    {{ home_img_tag }}
     <div class="home-heading-message">
       {{ site.data.owner[lng].home.top_header_line1
         | replace: site.data.conf.main.brand_replace, site.data.owner[lng].brand
@@ -55,7 +57,6 @@ layout: default
           | replace: site.data.conf.main.welcome_replace, site.data.lang[lng].constants.welcome }}
       {% endif -%}
     </div>
-  </div>
   <div class="home-intro-text markdown-style">
     {{ content }}
   </div>
