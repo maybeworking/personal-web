@@ -4,9 +4,7 @@
 # Licensed under MIT
 
 layout: default
-main page (index.html)
-
-
+# main page (index.html)
 
 #{%- if page.img %}
 # {%- if site.data.conf.others.home.header_img_with_img_tag == true -%}
