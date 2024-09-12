@@ -1,6 +1,5 @@
 ## Website
 ----------
->>>>>>> sept2024_update
 
 Check out my website at https://maybeworking.netlify.app/ to see this theme in action!
 
