@@ -2,13 +2,15 @@
 # Owner's Personal Information
 ###########################################################
 # This is your brand name
-brand: "May Azcarraga"
-
-# text below the brand name
+brand: "maybeworking"
 brand_sub_text: "Cybersecurity Color Blender"
 
 # used for seo meta post author (if it's not defined in post)
+# seo meta this is needed for each language
+# If meta_description is not defined in front matter, it's created from (post / page) content,
+# if it has no content, this will be used for page description. It is also used in manifest.json
 name: "May Azcarraga"
+meta_common_description: "Description of me"
 
 # home page top header texts
 home:
@@ -28,7 +30,6 @@ copyright_start_year: "2022"
 creative_commons:
   # choose your license from https://creativecommons.org/choose/?lang=en
   # then check link address below Selected License and make sure it matches with the list below
-
   # select one below
   # 1. by        Attribution 4.0 International
   # 2. by-nd     Attribution-NoDerivatives 4.0 International
@@ -38,18 +39,14 @@ creative_commons:
   # 6. by-nc-sa  Attribution-NonCommercial-ShareAlike 4.0 International
   license_type: "by-sa"
 
-# seo meta this is needed for each language
-# If meta_description is not defined in front matter, it's created from (post / page) content,
-# if it has no content, this will be used for page description. It is also used in manifest.json
-meta_common_description: "Description of me"
 
 # contact options (side nav bottom and about page)
 # the order of the items will be shown as here.
 # comment to remove any contact item
 contacts:
   - github: "https://github.com/maybeworking"
-  #- email: ""
   - linkedin: "mayazc"
+  #- email: ""
   #- twitter: ""
   #- mastodon: ""
   #- instagram: ""

@@ -3,19 +3,14 @@
 ###########################################################
 # if you want to force HTTPS, specify the domain without the http at the start
 # set domain: "your_github_user_name.github.io"
-domain: ""
-
-# your web site url
 # for GitHub Pages, url: "https://your_github_user_name.github.io"
-url: ""
-
-# path to this site
 # if your page is located at https://your_github_user_name.github.io/blog, then set baseurl: "/blog"
+domain: ""
+url: ""
 baseurl: ""
 
-# please use TZ database name column on the list table
-# https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-#timezone: ""
+# please use TZ database name column on the list table https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: ""
 
 ###########################################################
 # Front Matter Defaults (https://jekyllrb.com/docs/configuration/front-matter-defaults/)
@@ -28,15 +23,6 @@ defaults:
     values:
       layout: "post"
       permalink: /posts/:path
-
-  # for multilingual posts
-  - scope:
-      # to separate language posts folders
-      path: "*/_posts"
-    values:
-      hidden: true
-      layout: "post"
-      permalink: /:path
 
   # example: enable setting for all pages. You may still need to enable some setting from _data/conf/posts.yml or _data/conf/main.yml
   # - scope:
@@ -54,28 +40,25 @@ defaults:
 highlighter: rouge
 markdown: kramdown
 kramdown:
-  # This is default for GitHub Pages sites and cannot be changed.
-  syntax_highlighter: rouge
+  syntax_highlighter: rouge # This is default for GitHub Pages sites and cannot be changed.
 
 ###########################################################
 # Plugins (Plugins supported by GitHub Pages https://pages.github.com/versions/)
+# since GitHub Pages runs jekyll with "--safe" flag, we need to add supported plugins in here. (only github supported plugins are allowed)
 ###########################################################
 plugins:
   - jekyll-paginate
   - jekyll-redirect-from
-
-# since GitHub Pages runs jekyll with "--safe" flag, we need to add supported plugins in here. (only github supported plugins are allowed)
 whitelist:
   - jekyll-paginate
   - jekyll-redirect-from
 
 ###########################################################
 # jekyll-paginate (https://jekyllrb.com/docs/pagination/)
+# make sure this matches with post_query_paginator_post_per_page in _data/conf/posts.yml
 ###########################################################
 paginate_path: "/tabs/blog/:num"
-# number of post per page
-# make sure this matches with post_query_paginator_post_per_page in _data/conf/posts.yml
-paginate: 5
+paginate: 5 # number of post per page
 
 ###########################################################
 # jekyll-redirect-from (https://github.com/jekyll/jekyll-redirect-from)
@@ -94,8 +77,7 @@ compress_html:
   profile: false
   blanklines: false
   ignore:
-    # disable this feature for development env.
-    envs: [development]
+    envs: [development] # disable this feature for development env.
 
 ###########################################################
 # js compression (for removing comments(/**/only), line breaks and spaces)
@@ -103,17 +85,15 @@ compress_html:
 # for more info about environments (https://jekyllrb.com/docs/configuration/environments/)
 ###########################################################
 compress_js:
-  # enable or disable line breaks and space removal feature for development env.
-  linebreak_and_space: false
-  # disable this feature entirely for development or production env.
-  #ignore: development
+  linebreak_and_space: false # enable or disable line breaks and space removal feature for development env.
+  ignore: development # disable this feature entirely for development or production env.
 
 ###########################################################
 # Sass (https://jekyllrb.com/docs/assets/)
+# enable css compression
 ###########################################################
 sass:
   sass_dir: assets/_scss
-  # enable css compression
   style: compressed
 
 ###########################################################
