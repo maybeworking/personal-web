@@ -6,7 +6,7 @@ Check out my website at https://maybeworking.netlify.app/ to see this theme in a
 ### Introduction
 
 This is my personal website
-![Webapp Workflow](https://github.com/maybeworking/personal-web/blob/717b1dd0fc7c6d5693cd0bc8edfe4c4318f31b7a/assets/img/posts/webapp_workflow.png "Webapp Worlflow Diagram")
+![Webapp Workflow](https://github.com/maybeworking/personal-web/blob/9d037aaf021cc58ba15c5fcb4672a36351df1b71/assets/img/posts/webapp_workflow.png "Webapp Worlflow Diagram")
 
 
 ## Credits
