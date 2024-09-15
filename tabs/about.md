@@ -36,13 +36,26 @@ meta_description: "I'm the problem it's me"
 #published: false
 ---
 
-### ABOUT ME
+# ABOUT ME
 {:data-align="center"}
 
-# Backgrouond
+## Continuous Learning
+Passionate about cybersecurity, I am always seeking new challenges to expand my skills and contribute to the ever-evolving field of information security. With several years of experience in the industry, I have a strong foundation in various areas of cybersecurity, including network security, encryption, intrusion detection systems, firewalls, and more.
 
-- May: Air Force Veteran and a Security Engineer. 
+## Backgrouond
+An Air Force Veteran and a Security Engineer. 
 
-A United States Air Force Avionics Technician is a specialized maintenance professional who works on the electronic systems and equipment installed on aircraft. 
+- A United States Air Force Avionics Technician is a specialized maintenance professional who works on the electronic systems and equipment installed on aircraft. 
+- A Security Engineer is a cybersecurity professional who designs, builds, and maintains secure systems and networks, protecting digital assets from unauthorized access and data breaches.
 
-# Continous Learning
+As a dedicated Security Engineer with a solid foundation in information security, I have spent the last several years honing my skills to ensure the integrity and confidentiality of digital assets. My passion for cybersecurity began during my undergraduate studies in Computer Science, where I gained a strong foundation in computer programming, systems analysis, and data structures.
+
+Since entering the industry, I have continued to expand my knowledge through ongoing training, attending industry events, and self-study. I am committed to staying up-to-date with the latest trends, tools, and techniques in cybersecurity to provide innovative solutions and effective countermeasures against emerging threats. My ability to anticipate and respond to evolving cyber threats has proven invaluable to my clients and employers.
+
+## Skills
+- Strong knowledge of operating systems, programming languages, and databases
+- Proficient in designing and implementing secure computer systems and networks
+- Expertise in encryption techniques and protocols
+- In-depth understanding of firewalls, intrusion detection systems, and other cybersecurity tools
+- Excellent problem-solving abilities and attention to detail
+- Strong communication skills for collaborating with various teams and stakeholders

@@ -9,14 +9,14 @@ title: Hello World
 # multiple category is not supported
 category: auto generated
 # multiple tag entries are possible
-tags: [jekyll, psot1]
+tags: [post1]
 # thumbnail image for post
 img: ":post_future.jpg"
 # disable comments on this page
 comments_disable: true
 
 # publish date
-date: 2024-09-14 11:32:53 +0900
+#date: 2024-09-14 11:32:53 +0900
 
 # seo
 # if not specified, date will be used.
