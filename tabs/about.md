@@ -49,7 +49,7 @@ An Air Force Veteran and a Security Engineer.
 - A Security Engineer is a cybersecurity professional who designs, builds, and maintains secure systems and networks, protecting digital assets from unauthorized access and data breaches.
 
 ## About ME
-As a dedicated Security Engineer with a solid foundation in information security, I have spent the last several years honing my skills to ensure the integrity and confidentiality of digital assets. My passion for cybersecurity began during my undergraduate studies in Computer Science, where I gained a strong foundation in computer programming, systems analysis, and data structures.
+As a dedicated Security Engineer with a solid foundation in information security, I have spent the last several years honing my skills to ensure the integrity and confidentiality of digital assets. My passion for cybersecurity began during my studies in the University of Washington, where I gained a strong foundation in computer programming, systems analysis, and data structures.
 
 Since entering the industry, I have continued to expand my knowledge through ongoing training, attending industry events, and self-study. I am committed to staying up-to-date with the latest trends, tools, and techniques in cybersecurity to provide innovative solutions and effective countermeasures against emerging threats. My ability to anticipate and respond to evolving cyber threats has proven invaluable to my clients and employers.
 
