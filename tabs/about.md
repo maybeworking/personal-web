@@ -36,9 +36,13 @@ meta_description: "I'm the problem it's me"
 #published: false
 ---
 
-### Headings (centered)
+### ABOUT ME
 {:data-align="center"}
 
-#### Paragraph
+# Backgrouond
 
-born to be wild
+- May: Air Force Veteran and a Security Engineer. 
+
+A United States Air Force Avionics Technician is a specialized maintenance professional who works on the electronic systems and equipment installed on aircraft. 
+
+Current Aspirations

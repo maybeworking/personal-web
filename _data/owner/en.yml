@@ -15,7 +15,7 @@ meta_common_description: "Description of me"
 # home page top header texts
 home:
   # you can also use $site_brand, $site_greetings, $site_welcome in line1 and line2 for replacing texts.
-  top_header_line1: "May's landing Page"
+  top_header_line1: "May the blog be with you"
   # if commented, top header will be a single line
 
 # about page sub title
@@ -44,7 +44,7 @@ creative_commons:
 # the order of the items will be shown as here.
 # comment to remove any contact item
 contacts:
-  - github: "https://github.com/maybeworking"
+  - github: "maybeworking"
   - linkedin: "mayazc"
   #- email: ""
   #- twitter: ""
