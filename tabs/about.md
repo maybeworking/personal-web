@@ -45,4 +45,4 @@ meta_description: "I'm the problem it's me"
 
 A United States Air Force Avionics Technician is a specialized maintenance professional who works on the electronic systems and equipment installed on aircraft. 
 
-Current Aspirations
+# Continous Learning
