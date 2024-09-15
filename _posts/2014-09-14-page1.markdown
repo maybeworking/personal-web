@@ -38,15 +38,15 @@ comments_disable: true
 # to disable this page, simply set published: false or delete this file
 #published: false
 ---
-
+test1
 {%- comment -%} Please delete below and place your page content here {%- endcomment -%}
-
+test2
 {%- include util/auto-content-generator.liquid -%}
-
+test3
 <!-- outline-start -->
-
+test4
 {{ website_info_text_first }}
-
+test5
 <!-- outline-end -->
-
+test6
 {{ website_info_text_second }}
