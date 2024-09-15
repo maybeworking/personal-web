@@ -37,7 +37,5 @@ img: ":home-heading.png"
 ---
 
 Hello, I'm a security enthusiast.
-==============================
 
-
-{%- comment -%} Please delete below and place your page content here {%- endcomment -%}
+Welcome to my blog and personal website! Here, I share insights from my experiences as a Cybersecurity Engineer, along with projects showcasing my skills in various areas.
