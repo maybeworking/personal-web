@@ -7,15 +7,14 @@ gem "jekyll", "~> 3.9.0", group: :jekyll_plugins
 group :jekyll_plugins do
    gem "jekyll-paginate", "~> 1.1.0"
    gem "jekyll-redirect-from", "~> 0.16.0"
- end
+end
 
 # Use GitHub Pages plugin
 gem "github-pages", "~> 231"
 
-# added for netlify
-gem "gem_name", "version"
-gem "bigdecimal"
-gem "csv"
+# Added for Netlify
+gem "bigdecimal" # Required by Liquid
+gem "csv"        # Required for CSV functions
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 install_if -> { RUBY_PLATFORM =~ %r!mingw|mswin|java! } do
