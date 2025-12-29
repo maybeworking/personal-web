@@ -11,7 +11,7 @@ category: auto generated
 # multiple tag entries are possible
 tags: [post2]
 # thumbnail image for post
-img: ":2025-12-28\play-hero.png"
+img: "2025-12-28\play-hero.png"
 # disable comments on this page
 comments_disable: true
 
@@ -102,6 +102,7 @@ Port 22 and 13337 tcp are open.
 
 
 13337 can be reashed via http and found a webpage with what looks like API configuration/actions documenation.
+
 ![Remote Software Management API](:2025-12-28\image-20251227161532.png)
 
 
@@ -113,11 +114,15 @@ THe most interesting poriton of the page is that it looks to have a sensitive AP
     - Instructions to read log files
     
 Testing the /update endpoint:
+
 ![burpsuite post update](:2025-12-28\Pasted-image-20251227162849.png)
+
 Requires user internal and url can be the file to upload from our listener. 
 
 Testing the /log endpoint:
+
 ![burpsuite post update](:2025-12-28\Pasted-image-20251227163011.png)
+
 Checking /log to see if we can reach /etc/passwd to view possible system users but there is a "WAF: Access Denied for this Host". From the front page, the host has to be 127.0.0.1 or localhost to access this endpoint.
 
 Bypassing WAF techniques:
@@ -152,5 +157,5 @@ Connection: keep-alive
 Priority: u=4
 ```
 
-![burpsuite post update](:Pasted-image-20251227163943.png)
+![burpsuite post update](:2025-12-28\Pasted-image-20251227163943.png)
 This reveals clumsyadmin
