@@ -9,7 +9,7 @@ title: Hello World
 # multiple category is not supported
 category: auto generated
 # multiple tag entries are possible
-tags: [post1]
+tags: [post2]
 # thumbnail image for post
 img: ":2025-1228/post_pic1.jpg"
 # disable comments on this page
