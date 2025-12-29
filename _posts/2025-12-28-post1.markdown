@@ -11,7 +11,7 @@ category: auto generated
 # multiple tag entries are possible
 tags: [post2]
 # thumbnail image for post
-img: ":2025-12-28\play-hero.svg"
+img: ":2025-12-28\play-hero.png"
 # disable comments on this page
 comments_disable: true
 
