@@ -18,9 +18,7 @@ page_data:
     - title: "Automation"
       type: id_automation
       color: "#62b462"
-    - title: "Homelab"
-      type: id_homelab
-      color: "#2FD0ED"
+
 
   list:
     # security tools
@@ -40,39 +38,7 @@ page_data:
 
         **GitHub:** [ai-agent-rag-chroma](https://github.com/maybeworking/ai-agent-rag-chroma)
 
-    - type: id_security
-      project_name: "Obsidian MCP Server"
-      project_excerpt: "Model Context Protocol server to query an Obsidian vault via AI."
-      img: ":projects-github.png"
-      img_title: "Obsidian MCP"
-      date: "2025-03-01"
-      post: |
-        # Obsidian MCP Server
-
-        A Model Context Protocol (MCP) server that exposes an Obsidian vault to AI assistants.
-        Enables querying and searching notes directly through tools like Claude.
-
-        **Tech Stack:** Python, FastAPI, MCP
-
-        **GitHub:** [Obsidian-MCP](https://github.com/maybeworking/Obsidian-MCP)
-
     # automation
-    - type: id_automation
-      project_name: "n8n AI Agent Workflows"
-      project_excerpt: "Local AI agent workflows using n8n, Ollama, and PostgreSQL RAG."
-      img: ":projects-github.png"
-      img_title: "n8n AI Agents"
-      date: "2025-02-01"
-      post: |
-        # n8n AI Agent Workflows
-
-        A collection of n8n automation workflows integrating local LLMs with RAG pipelines.
-        Includes Slack summaries, Google Docs creation, and PostgreSQL data queries.
-
-        **Tech Stack:** n8n, Docker, Ollama, PostgreSQL, Flowise
-
-        **GitHub:** [ai-n8n-agents](https://github.com/maybeworking/ai-n8n-agents)
-
     - type: id_automation
       project_name: "Security Post Generator"
       project_excerpt: "Python script to auto-generate structured OSCP/CTF writeup posts."
@@ -88,21 +54,6 @@ page_data:
 
         **Usage:** `python new-security-post.py "HTB Lame" easy oscp`
 
-    # homelab
-    - type: id_homelab
-      project_name: "RAG PostgreSQL Stack"
-      project_excerpt: "Dockerized RAG pipeline with PostgreSQL vector storage."
-      img: ":projects-github.png"
-      img_title: "RAG PostgreSQL"
-      date: "2025-06-01"
-      post: |
-        # RAG PostgreSQL Stack
 
-        A fully Dockerized RAG application using PostgreSQL with pgvector for embeddings storage.
-        Designed for local deployment and querying private datasets.
-
-        **Tech Stack:** Python, PostgreSQL, pgvector, Docker
-
-        **GitHub:** [rag-postgresql](https://github.com/maybeworking/rag-postgresql)
 
 
