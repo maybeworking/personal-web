@@ -4,7 +4,7 @@ layout: home
 lng_pair: id_home
 
 # image for page specific usage
-img: ":home-heading.jpg"
+img: ":home-banner.jpg"
 # if not specified, site.time will be used.
 #date: 2022-03-03 12:32:00 +0000
 
@@ -36,6 +36,6 @@ img: ":home-heading.jpg"
 #published: false
 ---
 
-Hello, I'm a security enthusiast.
+Security engineer, Air Force veteran, and lifelong learner. I write about penetration testing, OSCP labs, homelab builds, and the tools I build along the way.
 
 Welcome to my blog and personal website! Here, I share insights from my experiences as a Cybersecurity Engineer, along with projects showcasing my skills in various areas.

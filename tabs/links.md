@@ -42,53 +42,96 @@ lng_pair: id_links
 page_data:
   main:
     header: "Links"
-    info: "Your Links page description."
+    info: "Useful security resources, tools, and learning platforms."
 
-  # To change order of the Categories, simply change order. (you don't need to change list order.)
   category:
-    - title: "JekyII / Liquid"
-      type: id_jekyiiliquid
-      color: "gray"
-    - title: "Web Design"
-      type: id_webdesign
-      color: "#F4A273"
-    - title: "Programming"
-      type: id_programming
+    - title: "Practice Labs"
+      type: id_labs
+      color: "#e94560"
+    - title: "Learning"
+      type: id_learning
       color: "#62b462"
+    - title: "Tools & References"
+      type: id_tools
+      color: "#2FD0ED"
+    - title: "Communities"
+      type: id_community
+      color: "#F4A273"
 
   list:
-    -
-    # programming
-    - type: id_programming
-      title: "Stack OverFlow"
-      url: "https://stackoverflow.com/"
-      info: "Stack Overflow is a question and answer website for professional and enthusiastic programmers."
+    # labs
+    - type: id_labs
+      title: "Hack The Box"
+      url: "https://www.hackthebox.com/"
+      info: "Leading cybersecurity upskilling platform with hands-on labs and CTF challenges."
+    - type: id_labs
+      title: "TryHackMe"
+      url: "https://tryhackme.com/"
+      info: "Learn cybersecurity through browser-based guided learning paths and hands-on labs."
+    - type: id_labs
+      title: "OffSec Proving Grounds"
+      url: "https://www.offsec.com/labs/"
+      info: "Practice labs from OffSec — the team behind OSCP. Includes Play (free) and Practice tiers."
+    - type: id_labs
+      title: "PicoCTF"
+      url: "https://picoctf.org/"
+      info: "Beginner-friendly CTF platform from Carnegie Mellon. Great for web, forensics, and crypto."
+    - type: id_labs
+      title: "VulnHub"
+      url: "https://www.vulnhub.com/"
+      info: "Download vulnerable VMs to practice offensive security locally."
 
-    # jekyiiliquid
-    - type: id_jekyiiliquid
-      title: "Jekyll"
-      url: "https://jekyllrb.com/"
-      info: "Transform your plain text into static websites and blogs."
-    - type: id_jekyiiliquid
-      title: "Jekyll Cheat Sheet"
-      url: "https://cloudcannon.com/community/jekyll-cheat-sheet/"
-      info: "There are so many Jekyll variables and filters to remember and it can be tricky to keep it all in your head. This cheat sheet serves as a quick reference of everything Jekyll can do."
-    - type: id_jekyiiliquid
-      title: "Liquid for Designers"
-      url: "https://github.com/Shopify/liquid/wiki/Liquid-for-Designers"
-      info: "Liquid for Designers wiki on GitHub."
-    - type: id_jekyiiliquid
-      title: "Liquid for Programmers"
-      url: "https://github.com/Shopify/liquid/wiki/Liquid-for-Programmers"
-      info: "Liquid for Programmers wiki on GitHub."
-    - type: id_jekyiiliquid
-      title: "Liquid Reference"
-      url: "https://shopify.dev/api/liquid/"
-      info: "Liquid is a template language created by Shopify and written in Ruby. It is now available as an open source project on GitHub."
+    # learning
+    - type: id_learning
+      title: "HackTricks"
+      url: "https://book.hacktricks.wiki/"
+      info: "Comprehensive wiki of hacking techniques, privilege escalation, web exploits, and more."
+    - type: id_learning
+      title: "OWASP Top 10"
+      url: "https://owasp.org/www-project-top-ten/"
+      info: "The standard awareness document for web application security risks."
+    - type: id_learning
+      title: "GTFOBins"
+      url: "https://gtfobins.github.io/"
+      info: "Curated list of Unix binaries that can be used to bypass local security restrictions."
+    - type: id_learning
+      title: "LOLBAS"
+      url: "https://lolbas-project.github.io/"
+      info: "Living Off The Land Binaries, Scripts, and Libraries for Windows."
+    - type: id_learning
+      title: "PayloadsAllTheThings"
+      url: "https://github.com/swisskyrepo/PayloadsAllTheThings"
+      info: "A list of useful payloads and bypass techniques for web application security."
 
-    # webdesign
-    - type: id_webdesign
-      title: "W3Schools"
-      url: "https://www.w3schools.com/"
-      info: "W3Schools offers free online tutorials, references and exercises in all the major languages of the web. Covering popular subjects like HTML, CSS, JavaScript, Python, SQL, Java, and many more."
+    # tools
+    - type: id_tools
+      title: "ExploitDB"
+      url: "https://www.exploit-db.com/"
+      info: "The Exploit Database — a CVE-compliant archive of public exploits and vulnerable software."
+    - type: id_tools
+      title: "CyberChef"
+      url: "https://gchq.github.io/CyberChef/"
+      info: "A web app for encryption, encoding, compression, and data analysis."
+    - type: id_tools
+      title: "Shodan"
+      url: "https://www.shodan.io/"
+      info: "Search engine for internet-connected devices. Great for reconnaissance."
+    - type: id_tools
+      title: "CVE Details"
+      url: "https://www.cvedetails.com/"
+      info: "Free CVE security vulnerability database and search engine."
+    - type: id_tools
+      title: "RevShells"
+      url: "https://www.revshells.com/"
+      info: "Reverse shell payload generator for various languages and shells."
+
+    # community
+    - type: id_community
+      title: "r/netsec"
+      url: "https://www.reddit.com/r/netsec/"
+      info: "Technical information security community on Reddit."
+    - type: id_community
+      title: "InfoSec.exchange"
+      url: "https://infosec.exchange/"
+      info: "Mastodon instance for the information security community."
 ---

@@ -1,0 +1,102 @@
+---
+layout: post
+title: "test3"
+subtitle: "owsa - medium"
+date: 2026-03-16
+author: "Your Name"
+categories: [security, owsa]
+tags: [todo-update-tags]
+img: "/assets/img/posts/2026-03-16/[screenshot].png"
+image_viewer_on: true
+image_lazy_loader_on: true
+---
+
+## Overview
+
+**Challenge/Lab:** test3
+**Platform:** [Hack The Box / TryHackMe / OffSec Labs / etc.]
+**Difficulty:** Medium
+**Certification:** [OSCP / OSWA / CEH / etc.]
+**Status:** 🔄 In Progress
+
+### Summary
+
+[Add 1-2 sentence summary of what this challenge/lab demonstrates]
+
+---
+
+## Reconnaissance & Enumeration
+
+### Initial Scan
+
+```bash
+# Add reconnaissance commands
+```
+
+**Findings:**
+- [Finding 1]
+- [Finding 2]
+
+---
+
+## Vulnerability Analysis
+
+### Vulnerability Identified
+
+**Type:** [Vulnerability Type]
+**Severity:** [Critical / High / Medium / Low]
+
+[Explain the vulnerability]
+
+---
+
+## Exploitation
+
+### Tools Used
+
+| Tool | Purpose |
+|------|---------|
+| [Tool 1] | [Purpose] |
+| [Tool 2] | [Purpose] |
+
+### Exploitation Steps
+
+**Step 1:** [Description]
+
+```bash
+[Command]
+```
+
+---
+
+## Post-Exploitation
+
+### Access Achieved
+
+**User:** [username]
+**Privilege Level:** [Level]
+
+---
+
+## Key Findings & Lessons Learned
+
+### What Worked Well
+- [Lesson 1]
+- [Lesson 2]
+
+### Challenges Encountered
+- **Challenge:** [What was difficult]
+- **Resolution:** [How you solved it]
+
+---
+
+## References
+
+- [Reference 1]
+- [Reference 2]
+
+---
+
+**Status:** 🔄 In Progress
+**Last Updated:** 2026-03-16
+
