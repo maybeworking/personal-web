@@ -6,6 +6,28 @@ Check out my website at https://maybeworking.netlify.app/ to see this theme in a
 ### Introduction
 
 This is my personal website
+
+## Local Development
+--------------------
+
+To serve the site locally, navigate to the project directory first, then run:
+
+```bash
+cd prod/personal-web
+bundle exec jekyll serve
+```
+
+Common useful flags:
+- `--livereload` – auto-refresh browser on changes
+- `--drafts` – include draft posts
+- `--host 0.0.0.0` – make accessible on your network
+- `--port 4001` – use a custom port (default is 4000)
+
+Example with live reload:
+```bash
+cd prod/personal-web
+bundle exec jekyll serve --livereload
+```
 ![Webapp Workflow](https://github.com/maybeworking/personal-web/blob/9d037aaf021cc58ba15c5fcb4672a36351df1b71/assets/img/posts/webapp_workflow.png "Webapp Worlflow Diagram")
 
 

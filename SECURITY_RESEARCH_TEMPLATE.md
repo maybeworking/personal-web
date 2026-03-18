@@ -17,10 +17,10 @@ This template is designed for documenting security research, penetration testing
 ---
 layout: post
 title: "[CHALLENGE/LAB NAME] - [BRIEF DESCRIPTION]"
-subtitle: "[Certification/Platform] - [Difficulty Level]"
+subtitle: "[Platform] - [Difficulty Level]"
 date: YYYY-MM-DD
 author: "Your Name"
-categories: [security, oscp, oswa, penetration-testing]
+categories: [security, penetration-testing]
 tags: [vulnerability-type, tool1, tool2, technique]
 img: "/assets/img/posts/[date]/[screenshot].png"
 image_viewer_on: true
@@ -32,7 +32,6 @@ image_lazy_loader_on: true
 **Challenge/Lab:** [Name]
 **Platform:** [Hack The Box / TryHackMe / OffSec Labs / etc.]
 **Difficulty:** [Easy / Medium / Hard / Insane]
-**Certification:** [OSCP / OSWA / CEH / etc.]
 **Status:** ✅ Completed
 
 ### Summary
@@ -296,19 +295,7 @@ Usage: python3 exploit.py [target] [options]
    - Include relevant CVE numbers and CVSS scores
    - Reference industry standards (OWASP, NIST, etc.)
 
-### 2. **For OSCP Specific Content**
-   - Emphasize methodology over tool usage
-   - Show manual exploitation techniques
-   - Include privilege escalation analysis
-   - Document networking/firewall traversal if applicable
-
-### 3. **For OSWA Specific Content**
-   - Focus on web vulnerabilities (SQL injection, XSS, CSRF, etc.)
-   - Show request/response analysis
-   - Include Burp Suite / manual testing techniques
-   - Discuss security bypass techniques
-
-### 4. **Code/Command Formatting**
+### 2. **Code/Command Formatting**
    - Use syntax highlighting (bash, python, etc.)
    - Include full context (command line prompts)
    - Show expected output when relevant
@@ -325,24 +312,24 @@ Usage: python3 exploit.py [target] [options]
 ## Example Frontmatter Values
 
 ```yaml
-# OSCP Lab Example
+# Lab Example
 ---
 layout: post
 title: "HacktheBox - Lame - SQL Injection to RCE"
-subtitle: "OSCP Preparation - Easy"
+subtitle: "Easy Difficulty"
 date: 2024-03-16
-categories: [security, oscp, penetration-testing]
+categories: [security, penetration-testing]
 tags: [sql-injection, rce, linux, apache]
 img: "/assets/img/posts/2024-03-16/lame-dashboard.png"
 ---
 
-# OSWA Lab Example
+# Web Security Lab Example
 ---
 layout: post
 title: "WebGoat - SQL Injection Challenge"
-subtitle: "OSWA Lab - Medium Difficulty"
+subtitle: "Medium Difficulty"
 date: 2024-03-16
-categories: [security, oswa, web-security]
+categories: [security, web-security]
 tags: [sql-injection, web-vulnerability, database]
 img: "/assets/img/posts/2024-03-16/sql-injection-example.png"
 ---

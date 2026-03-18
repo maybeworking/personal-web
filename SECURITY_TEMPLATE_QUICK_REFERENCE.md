@@ -1,6 +1,6 @@
 # Security Research Template Quick Reference
 
-You now have a complete system for creating OSCP/OSWA security research content!
+You now have a complete system for creating security research content!
 
 ## Files Created
 
@@ -18,10 +18,10 @@ You now have a complete system for creating OSCP/OSWA security research content!
 
 ```bash
 # Generate new post
-python3 new-security-post.py "HTB Lame" "easy" "oscp"
+python3 new-security-post.py "HTB Lame" "easy" "security"
 
 # Or
-python3 new-security-post.py "WebGoat SQL Injection" "medium" "oswa"
+python3 new-security-post.py "WebGoat SQL Injection" "medium" "web-security"
 
 # With no arguments, shows help
 python3 new-security-post.py
@@ -51,7 +51,7 @@ cp SECURITY_RESEARCH_TEMPLATE.md _posts/2024-03-16-lab-name.markdown
 ├── 🎯 Vulnerability Analysis (What vulnerability exists)
 ├── 💥 Exploitation (Step-by-step how you exploited it)
 ├── 🔓 Post-Exploitation (Privilege escalation, data collection)
-├── 📚 Lessons Learned (Key takeaways for OSCP/OSWA)
+├── 📚 Lessons Learned (Key takeaways and insights)
 ├── 🛡️ Remediation (How to fix/prevent)
 ├── 📖 References (CVEs, tools, resources)
 └── 📎 Appendix (Full scripts, cheatsheets)
@@ -66,9 +66,9 @@ cp SECURITY_RESEARCH_TEMPLATE.md _posts/2024-03-16-lab-name.markdown
 ---
 layout: post
 title: "Lab Name - Vulnerability"
-subtitle: "oscp/oswa - difficulty"
+subtitle: "Difficulty Level"
 date: YYYY-MM-DD
-categories: [security, oscp]
+categories: [security, penetration-testing]
 tags: [sql-injection, rce, linux]
 img: "/assets/img/posts/YYYY-MM-DD/screenshot.png"
 image_viewer_on: true
@@ -95,12 +95,10 @@ image_lazy_loader_on: true
 
 ### Categories (pick main one)
 - `security` - Always
-- `oscp` - OSCP labs
-- `oswa` - OSWA labs
+- `penetration-testing` - General pen-testing
 - `ctf` - CTF challenges
 - `web-security` - Web vulns
 - `network-security` - Network stuff
-- `penetration-testing` - General pen-testing
 
 ### Tags (multiple, security-specific)
 
@@ -142,7 +140,7 @@ code "_posts/2024-03-16-slug.markdown"
 - Document Vulnerability discovered
 - Write Exploitation steps (most important!)
 - Add Post-Exploitation results
-- Conclude with Lessons Learned
+- Conclude with Lessons Learned and insights
 
 ### 4️⃣ Add Images
 ```
@@ -166,7 +164,7 @@ bundle exec jekyll serve
 ### 6️⃣ Publish
 ```bash
 git add _posts/2024-03-16-lab-name.markdown
-git commit -m "Add OSCP writeup: Challenge Name"
+git commit -m "Add security writeup: Challenge Name"
 git push origin main
 # Auto-deploys to Netlify
 ```
@@ -175,15 +173,15 @@ git push origin main
 
 ## Example Usage
 
-### OSCP Lab Writeup
+### Security Lab Writeup
 ```bash
-python3 new-security-post.py "HTB Lame - RCE" "easy" "oscp"
+python3 new-security-post.py "HTB Lame - RCE" "easy" "security"
 # Creates: _posts/2024-03-16-htb-lame-rce.markdown
 ```
 
-### OSWA Writeup
+### Web Security Writeup
 ```bash
-python3 new-security-post.py "WebGoat SQL Injection" "medium" "oswa"
+python3 new-security-post.py "WebGoat SQL Injection" "medium" "web-security"
 # Creates: _posts/2024-03-16-webgoat-sql-injection.markdown
 ```
 
@@ -213,7 +211,7 @@ python3 new-security-post.py "Picoctf Web Challenge" "medium" "ctf"
 - ✅ Explain the "why" not just "how"
 - ✅ Show command output
 - ✅ Document challenges & solutions
-- ✅ Include timing (OSCP relevant)
+- ✅ Include timing information
 - ✅ Reference CVE/OWASP standards
 - ✅ Make it readable (not a wall of text)
 
@@ -240,21 +238,21 @@ personal-web/
 ## Common Commands
 
 ```bash
-# Generate OSCP post
-python3 new-security-post.py "Lab Name" "easy" "oscp"
+# Generate security post
+python3 new-security-post.py "Lab Name" "easy" "security"
 
-# Generate OSWA post
-python3 new-security-post.py "Lab Name" "medium" "oswa"
+# Generate web security post
+python3 new-security-post.py "Lab Name" "medium" "web-security"
 
 # Test locally
 bundle exec jekyll serve
 
 # View posts
-# Browse to: http://localhost:4000/categories/oscp/
+# Browse to: http://localhost:4000/categories/security/
 
 # Publish
 git add _posts/2024-03-16-lab-name.markdown
-git commit -m "Add OSCP writeup: Lab Name"
+git commit -m "Add security writeup: Lab Name"
 git push
 ```
 
@@ -277,7 +275,7 @@ git push
 1. **Capture while fresh**: Document immediately after completing challenge
 2. **Show your process**: Include dead ends and troubleshooting
 3. **Explain thoroughly**: Others should learn from your post
-4. **Time management**: Track how long each phase took (OSCP prep)
+4. **Time management**: Track how long each phase took
 5. **Stay updated**: Revisit posts if exploits/techniques change
 6. **Reuse templates**: Consistent structure makes writing faster
 7. **Cross-reference**: Link to related posts and resources

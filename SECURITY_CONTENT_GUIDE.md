@@ -10,11 +10,11 @@ Quick guide for writing security research posts on your blog (OSCP, OSWA, CTF wr
 
 **Option A: Using Python Script (Recommended)**
 ```bash
-# OSCP Lab
-python3 new-security-post.py "HTB Lame" "easy" "oscp"
+# Security Lab
+python3 new-security-post.py "HTB Lame" "easy" "security"
 
-# OSWA Challenge
-python3 new-security-post.py "WebGoat SQL Injection" "medium" "oswa"
+# Web Security Challenge
+python3 new-security-post.py "WebGoat SQL Injection" "medium" "web-security"
 
 # CTF Challenge
 python3 new-security-post.py "PicoCTF Web-100" "easy" "ctf"
@@ -35,10 +35,10 @@ code _posts/2024-03-16-oscp-lab-name.markdown
 ---
 layout: post
 title: "HTB Lame - SQL Injection RCE"
-subtitle: "OSCP Lab - Easy"
+subtitle: "Easy Difficulty"
 date: 2024-03-16
 author: "Your Name"
-categories: [security, oscp]
+categories: [security, penetration-testing]
 tags: [sql-injection, rce, linux]
 img: "/assets/img/posts/2024-03-16/screenshot.png"
 image_viewer_on: true
@@ -48,8 +48,8 @@ image_lazy_loader_on: true
 
 **Key Fields:**
 - `title` - Challenge/Lab name + main vulnerability
-- `subtitle` - Type/Difficulty (keep brief)
-- `categories` - [security, oscp/oswa, penetration-testing, etc.]
+- `subtitle` - Difficulty level (keep brief)
+- `categories` - [security, penetration-testing, web-security, etc.]
 - `tags` - Vulnerability types, tools, techniques used
 - `img` - Thumbnail (place image in `assets/img/posts/YYYY-MM-DD/`)
 
@@ -87,7 +87,7 @@ git push origin main
 ### Overview
 - **What it is**: 1-2 sentence summary + key details
 - **Keep it brief**: Reader should know if this is relevant to them
-- **Include**: Difficulty, platform, certification type
+- **Include**: Difficulty, platform, challenge type
 
 ### Reconnaissance & Enumeration
 - **Show your methodology**: nmap, service enumeration, web crawling
@@ -117,7 +117,7 @@ git push origin main
 ### Lessons Learned
 - **Key techniques**: Methods that were effective
 - **Challenges**: What was tricky and how you solved it
-- **Takeaways**: Concepts relevant to OSCP/OSWA
+- **Takeaways**: Important security concepts learned
 - **Time tracking**: How long each phase took
 
 ### References
@@ -138,7 +138,7 @@ git push origin main
 - Document dead ends and debugging
 - Reference official resources (CVE, CVSS, OWASP)
 - Use code syntax highlighting
-- Include timing for OSCP relevance
+- Include timing information
 - Show both automated and manual techniques
 
 ❌ **DON'T:**
@@ -199,60 +199,10 @@ def generate_payload(injection_point):
 
 ---
 
-## OSCP-Specific Tips
-
-1. **Emphasize Methodology**
-   - Show manual exploitation over tool automation
-   - Document your recon process in detail
-   - Include multiple approaches if applicable
-
-2. **Time Allocation**
-   - Include timeline showing how long each phase took
-   - Relevant for time management during exam
-   - Shows efficiency of your methodology
-
-3. **Privilege Escalation**
-   - Deep dive into privilege escalation techniques
-   - Show manual enumeration steps
-   - Document kernel exploits carefully
-
-4. **Report Quality**
-   - Your posts should be report-ready
-   - Include risk assessment
-   - Add remediation steps
-
----
-
-## OSWA-Specific Tips
-
-1. **Web Vulnerability Focus**
-   - Deep dive into common web vulns (OWASP Top 10)
-   - Show Burp Suite workflow
-   - Document request/response analysis
-
-2. **Manual Testing**
-   - Emphasize manual testing over automated scanning
-   - Show how to identify vulnerabilities manually
-   - Include payload crafting details
-
-3. **Authentication Bypass**
-   - Document various bypass techniques
-   - Show session analysis
-   - Include cookie/token exploitation
-
-4. **API Testing**
-   - If application has API, test it thoroughly
-   - Document API authentication mechanisms
-   - Show API-specific vulnerabilities
-
----
-
 ## Common Categories & Tags
 
 ### Categories
 - `security` - Always include for all posts
-- `oscp` - OSCP-focused content
-- `oswa` - OSWA-focused content
 - `penetration-testing` - General pen-testing
 - `ctf` - Capture The Flag challenges
 - `web-security` - Web application security
